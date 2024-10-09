@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.HelloController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="si_loginForm" layoutX="300.0" layoutY="-4.0" prefHeight="400.0" prefWidth="300.0" styleClass="white-form" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="59.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Login Account" textFill="#d5e42a">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="si_username" layoutX="48.0" layoutY="144.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="text-field" stylesheets="@loginDesign.css" />
+                  <PasswordField fx:id="si_password" layoutX="48.0" layoutY="192.0" minHeight="30.0" minWidth="220.0" promptText="Password" styleClass="text-field" stylesheets="@loginDesign.css" />
+                  <Button fx:id="si_loginBtn" layoutX="48.0" layoutY="260.0" minHeight="40.0" minWidth="220.0" mnemonicParsing="false" styleClass="login-btn" stylesheets="@loginDesign.css" text="Login" />
+                  <Hyperlink fx:id="forgotPassword" layoutX="48.0" layoutY="229.0" stylesheets="@loginDesign.css" text="Forgot Password?" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="su_signupForm" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="white-form" stylesheets="@loginDesign.css" visible="false">
+               <children>
+                  <Label layoutX="30.0" layoutY="59.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Register Account" textFill="#d5e42a">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="su_username" layoutX="48.0" layoutY="108.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="text-field" stylesheets="@loginDesign.css" />
+                  <PasswordField fx:id="su_password" layoutX="48.0" layoutY="150.0" minHeight="30.0" minWidth="220.0" promptText="Password" styleClass="text-field" stylesheets="@loginDesign.css" />
+                  <Button fx:id="su_signupBtn" layoutX="48.0" layoutY="300.0" minHeight="40.0" minWidth="220.0" mnemonicParsing="false" styleClass="login-btn" stylesheets="@loginDesign.css" text="Sign Up" />
+                  <Hyperlink layoutX="48.0" layoutY="269.0" stylesheets="@loginDesign.css" text="Forgot Password?" />
+                  <ComboBox fx:id="su_question" layoutX="48.0" layoutY="193.0" minHeight="30.0" minWidth="220.0" prefWidth="150.0" promptText="Question" styleClass="text-field" stylesheets="@loginDesign.css" />
+                  <PasswordField fx:id="su_answer" layoutX="48.0" layoutY="232.0" minHeight="30.0" minWidth="220.0" promptText="Answer" styleClass="text-field" stylesheets="@loginDesign.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="site_form" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="82.0" layoutY="265.0" stylesheets="@loginDesign.css" text="Create Account" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="105.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="site_createBtn" layoutX="40.0" layoutY="306.0" minHeight="40.0" minWidth="220.0" mnemonicParsing="false" onAction="#switchform" styleClass="create-btn" stylesheets="@loginDesign.css" text="Create new Account" AnchorPane.bottomAnchor="54.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="site_aldreadyHave" layoutX="40.0" layoutY="338.0" minHeight="40.0" minWidth="220.0" mnemonicParsing="false" onAction="#switchform" styleClass="create-btn" stylesheets="@loginDesign.css" text="Already have Account" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="18.0" layoutY="164.0" stylesheets="@loginDesign.css" text="Group 5 Grocery Store" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="62.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../target/classes/Utils/Image/Remove-bg.ai_1728396017861.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
